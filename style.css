@@ -1,0 +1,72 @@
+._title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-btn {
+  margin: auto;
+}
+
+.game-container {
+  display: grid;
+  grid-template-rows: min-content;
+  row-gap: 10px;
+}
+
+canvas,
+.game-board {
+  width: 610px;
+  height: 610px;
+
+  margin: auto;
+  max-width: 600px;
+  max-height: 600px;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: 0;
+}
+
+.game-board {
+  display: grid;
+
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px;
+
+  gap: 5px 5px;
+
+  place-items: center;
+  place-content: center;
+
+  grid-auto-flow: row;
+  background-color: black;
+
+  z-index: 0;
+}
+
+#canvas {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cell {
+  display: flex;
+  justify-content: center; /* Align horizontal */
+  align-items: center;
+
+  width: 200px;
+  height: 200px;
+  place-self: center;
+
+  font-size: xx-large;
+  text-decoration: wavy;
+
+  background-color: white;
+}
+
+.cell:hover {
+  opacity: 0.97;
+}
